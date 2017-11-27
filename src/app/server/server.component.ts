@@ -8,6 +8,13 @@ import { Component } from '@angular/core';
 })
 
 export class ServerComponent {
-    name: string = 'Server'
-    model: string = '4.3.2'
+    id: string = '';
+    status: string = '';
+
+    constructor(){
+        this.id = "ABC" + (Math.floor(Math.random() * 10000));
+        this.status =  ((Math.floor(Math.random() * 100) < 20)? 'offline' : ((Math.floor(Math.random() * 100) < 40)? 'connecting' : 'online';
+        setTimeout(()=>{ this.status = "online"},(Math.floor(Math.random() * 1000) + 2000));
+    }
 }
+

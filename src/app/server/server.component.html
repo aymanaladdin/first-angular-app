@@ -1,6 +1,6 @@
 <div class="row">
-    <p class="col-3 header">Name</p>
-    <p class="col-9">{{name}}</p>
-    <p class="col-3 header">Model</p>
-    <p class="col-9">{{model}}</p>
+    <p class="col-3 text-secondary font-weight-bold">ID</p>
+    <p class="col-9 text-info">{{id}}</p>
+    <p class="col-3 text-secondary font-weight-bold">Status</p>
+    <p class="col-9" [ngClass]="{'text-success': status === 'online', 'text-warning': status === 'connecting', 'text-danger': status === 'offline'}">{{status}}</p>
 </div>

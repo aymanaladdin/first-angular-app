@@ -1,7 +1,18 @@
 <h2 class="col-12">Listing servers</h2>
-<app-server class="col-4"></app-server>
-<app-server class="col-4"></app-server>
-<app-server class="col-4"></app-server>  
+<input type="text" class="form-control col-8" [(ngModel)]="serverName">
+<button type="button" class="btn {{classBtn}} btn-sm col-3 ml-2" [disabled] = "!allowBtn" (click)="onCreateServer()">Add Server</button>
+<p class="col-12">{{createServerStatus}}</p>
+<app-server class="col-3 border border-info my-2 mx-1"></app-server>
+<app-server class="col-3 border border-info my-2 mx-1"></app-server>
+<app-server class="col-3 border border-info my-2 mx-1"></app-server>
+<app-server class="col-3 border border-info my-2 mx-1"></app-server>
+<app-server class="col-3 border border-info my-2 mx-1"></app-server>
+
+
+<!-- using property selector instead of element -->
 <!-- <div app-server class="col-6"></div>
 <div app-server class="col-6"></div> -->
 
+<!-- using 2way data binding -->
+<!-- <input type="text" class="form-control col-12" [(ngModel)]="someMsg"/>
+<p style="margin-top:1%" class="col-12 border border-primary">{{someMsg}}</p> -->
